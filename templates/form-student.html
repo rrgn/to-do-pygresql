@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/submit_form" method="POST">
+  <p>
+    <label for="student_name">Name</label>
+    <input type="text" name="student_name">
+  </p>
+  <p>
+    <label for="student_website">Website</label>
+    <input type="text" size="100" name="student_website">
+  </p>
+  <p>
+    <label for="cohort_start_date" value="YYYY-MM-DD">Cohort Start Date</label>
+    <input type="text" size="100" name="cohort_start_date">
+  </p>
+  <p>
+    <button type="submit">Create Student</button>
+  </p>
+</form>
+{% endblock %}

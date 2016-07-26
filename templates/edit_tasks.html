@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="/append_task" method="POST">
+  <input type="text" name="add_task" size="80" placeholder="Type your tasks here">
+  <button type="submit" name="add_task">Add Task</button>
+</form>
+
+<form action="/submit_form" method="POST">
+  <ul>
+
+      {% for task in tasks %}
+
+    {% if task.completed %}
+     <li style="text-decoration:line-through; color: red">{{task.task_description}}
+       <input type="checkbox" name="{{task.id}}">
+     </li>
+    {% else %}
+    <li>{{task.task_description}}
+      <input type="checkbox" name="{{task.id}}">
+    </li>
+    {% endif %}
+      {% endfor %}
+  </ul>
+  <button type="submit" name="complete">Mark Complete</button>
+  <button type="submit" name="delete">Delete</button>
+</form>
+{% endblock %}

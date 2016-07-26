@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+  font-size: 20px;
+  color: blue;
+  text-align: center;
+  background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/lined_paper.png");
+}
+
+input {
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 200%;
+}
